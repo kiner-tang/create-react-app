@@ -244,7 +244,11 @@ function verifyTypeScriptSetup() {
         );
       }
     } else if (parsedCompilerOptions[option] !== valueToCheck) {
-      appTsConfig.compilerOptions[option] = value;
+      try{
+        appTsConfig.compilerOptions[option] = value;
+      }catch (e) {
+        console.log(`[${option}]编译异常`, e.message);
+      }
       messages.push(
         `${coloredOption} ${chalk.bold(
           valueToCheck == null ? 'must not' : 'must'
