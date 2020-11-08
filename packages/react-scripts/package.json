@@ -1,6 +1,8 @@
 {
-  "name": "react-scripts",
-  "version": "4.0.1",
+  "name": "@kiner/react-scripts",
+  "private": false,
+  "version": "0.0.1",
+  "baseVersion": "4.0.0",
   "description": "Configuration and scripts for Create React App.",
   "repository": {
     "type": "git",
